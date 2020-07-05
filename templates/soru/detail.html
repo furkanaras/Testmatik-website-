@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+
+{% block body %}
+
+    <div class="container">
+
+        <div class="card col-md-6 offset-md-3">
+            <div class="card-body">
+                {% if soru.image %}
+                    <img src="{{ soru.image.url }}" class="img-fluid">
+                {% endif %}
+
+                <h5 class="card-title"><small>   {{ soru.sınıf }}.sınıf  </small></h5>
+                <h5 class="card-title">{{ soru.ders }}<small>   {{ soru.konu }}  </small></h5>
+                <h5 class="card-title">Zorluk: {{ soru.zorluk }}</h5>
+            <h5 class="card-title">Yükleyen: {{ soru.user }}</h5>
+
+          </div>
+        </div>
+
+    </div>
+
+{% endblock %}

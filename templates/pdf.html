@@ -1,0 +1,67 @@
+{% load static %}
+
+<!DOCTYPE html >
+<html>
+    <head>
+        <title>Test</title>
+       <style type="text/css">
+            body {
+                font-weight: 200;
+                font-size: 14px;
+            }
+            .header {
+                font-size: 20px;
+                font-weight: 100;
+                text-align: center;
+                color: #007cae;
+            }
+            .title {
+                font-size: 22px;
+                font-weight: 100;
+               /* text-align: right;*/
+               padding: 10px 20px 0px 20px;
+            }
+            .title span {
+                color: #007cae;
+            }
+            .details {
+                padding: 10px 20px 0px 20px;
+                text-align: left !important;
+                /*margin-left: 40%;*/
+            }
+            .hrItem {
+                border: none;
+                height: 1px;
+                /* Set the hr color */
+                color: #333; /* old IE */
+                background-color: #fff; /* Modern Browsers */
+            }
+           .soru{
+ counter-reset: section;
+           }
+        </style>
+    </head>
+    <div class='header'>
+                <p class='title'>Test 1</p>
+            </div>
+        <div class="row">
+        {% for soru in sorular %}
+            <div class="col-xs-12 col-md-6 col-lg-4 mb-4 ">
+             <div class="card h-100" style="position: relative;">
+            {% if soru.image %}
+
+                <!-- <img src="{{ 'C:\Users\furka\PyCharm Proje\testmatik\static\indir.png' }}" alt="">-->
+                <center><img src="{{ 'C:\Users\donmr\PycharmProjects\testmatikk' }}{{ soru.image.url}}" alt="Soru"></center>
+    <hr>
+
+            {% endif %}
+             </div>
+            </div>
+        {% endfor %}
+        <center><h2>Test Bitti! Cevaplari Kontrol Ediniz.</h2></center>
+        </div>
+
+ <!--           <hr class='hrItem' />-->
+
+    </body>
+</html>
